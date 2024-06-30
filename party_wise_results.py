@@ -27,7 +27,6 @@ def extract_party_results(url):
                 leading = columns[2].text.strip()
                 total = columns[3].text.strip()
 
-                # Extracting only the number from href link
                 link = columns[1].find('a')['href'].split('-')[-1].split('.')[0] if columns[1].find('a') else None
 
                 extracted_data.append([party_name, won_seats, leading, total, link])

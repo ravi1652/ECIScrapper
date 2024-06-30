@@ -1,11 +1,9 @@
 from party_wise_results import extract_party_results
 from candidate_wise_results import extract_winners_details
 
-# URL configurations
 url_main = "https://results.eci.gov.in/PcResultGenJune2024/index.htm"
 url_base = "https://results.eci.gov.in/PcResultGenJune2024/partywisewinresultState-"
 
-# Extract party-wise results
 party_results = extract_party_results(url_main)
 
 if party_results:

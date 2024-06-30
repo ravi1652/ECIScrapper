@@ -9,10 +9,8 @@ def extract_winners_details(url):
 
         soup = BeautifulSoup(html_content, 'html.parser')
 
-        # Extracting the winning candidate information
         winning_candidate = soup.find('h2').text.strip()
 
-        # Extracting table data
         table = soup.find('table', class_='table')
         if not table:
             raise ValueError(f"Table with class 'table' not found on {url}")
